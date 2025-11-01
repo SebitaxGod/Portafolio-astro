@@ -1,0 +1,30 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Header from '../components/Header';
+import Hero from '../components/Hero';
+import About from '../components/About';
+import Experience from '../components/Experience';
+import Projects from '../components/Projects';
+import Skills from '../components/Skills';
+import Contact from '../components/Contact';
+---
+
+<Layout 
+  title="Carlos González | Full Stack Developer" 
+  description="Portafolio profesional de Carlos González - Ingeniero en Informática especializado en desarrollo Full Stack, aplicaciones web y e-commerce."
+>
+  <Header client:load />
+  <main>
+    <Hero client:load />
+    <About client:load />
+    <Experience client:load />
+    <Projects client:load />
+    <Skills client:load />
+    <Contact client:load />
+  </main>
+  
+  <footer class="bg-slate-900 text-slate-300 py-8 text-center">
+    <p>© {new Date().getFullYear()} Carlos González. Todos los derechos reservados.</p>
+    <p class="text-sm mt-2">Desarrollado con Astro, React, TailwindCSS y Framer Motion</p>
+  </footer>
+</Layout>
